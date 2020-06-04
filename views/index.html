@@ -1,0 +1,103 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>Integers Generator</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Integers Generator</h1>
+    </header>
+
+    <main>
+      <p>
+        Enter your email and password to show existing key or register for a new
+        one:
+      </p>
+
+      <form id="myForm" name="myForm">
+        <label>
+          Email Address
+          <input
+            name="email"
+            type="text"
+            maxlength="100"
+            required
+            placeholder="Your email"
+          />
+        </label>
+        <label>
+          Password
+          <input
+            name="password"
+            type="password"
+            maxlength="100"
+            required
+            placeholder="Your password"
+          />
+        </label>
+        <button type="submit">Register / Show Key</button>
+      </form>
+
+      <section id="result">
+        <p id="message"></p>
+        <p id="email"></p>
+        <div style="display:flex;">
+          <label id="key-label" for="fname" style="margin:auto;">Key: </label>
+          <input
+            name="key"
+            id="key"
+            type="text"
+            readonly
+            style="margin:auto;"
+          />
+          <div class="tooltip">
+            <button id="copy" style="height:100%;">
+              <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+              Copy
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Enter a valid key to get an incrementing integer:
+      <div style="display:flex;">
+        <input
+          name="key"
+          id="try-key"
+          type="text"
+          value="wpJrFwpVQ9"
+          style="margin:auto;"
+        />
+        <button id="try-btn" style="height:100%;">
+          Try me!
+        </button>
+      </div>
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:2em;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>
